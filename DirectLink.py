@@ -1,5 +1,6 @@
 import globalPluginHandler
 import ui
+import re
 import api
 import os
 from textInfos import POSITION_SELECTION
@@ -35,25 +36,38 @@ def getSelectedText() -> str:
 
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
+	def isLink(self, match):
+		text1 = re.match(r"^https:\/\/(?:www\.dropbox|drive\.google|1drv)\.(com|ms)\/", match)
+		if text1:
+			global domain
+			domain = text1.group()
+		return text1
 
-    @script(
-        description="Converts the given link to a direct link",
-        gesture="kb:alt+nvda+l",
-        category="DirectLink"
-    )
-    def script_convertingLink(self, gesture):
-        global link
-        link = getSelectedText()
-        link =link.replace("?dl=0", '')
-        link = link.replace("www", "dl")            
-        api.copyToClip(link)
-        ui.message("the link has been copied to the clipboard, press alt+nvda+k to open in browser")
+	def convertDB(self, dbLink):
+		dbLink = dbLink.replace("?dl=0", '')
+		dbLink = dbLink.replace("www", "dl")
+		return dbLink
 
-    @script(
-        description="open the selected link in browser",
-        gesture="kb:alt+nvda+k",
-        category="DirectLink"
-    )
-    def script_openInBrowser(self, gesture):
-        os.startfile(link)
+	@script(
+		description="Converts the given link to a direct link",
+		gesture="kb:alt+nvda+l",
+		category="DirectLink"
+	)
+	def script_convertingLink(self, gesture):
+		global link
+		link = getSelectedText()
+		if self.isLink(link):
+			if domain == "https://www.dropbox.com/":
+				ui.message("the link is dropbox")
+				link = self.convertDB(link)
+				api.copyToClip(link)
+		else:
+			ui.message("not dropbox link")
 
+	@script(
+		description="open the selected link in browser",
+		gesture="kb:alt+nvda+k",
+		category="DirectLink"
+	)
+	def script_openInBrowser(self, gesture):
+		os.startfile(link)
