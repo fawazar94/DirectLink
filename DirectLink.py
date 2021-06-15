@@ -48,6 +48,20 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		dbLink = dbLink.replace("www", "dl")
 		return dbLink
 
+	def convertGD(self, dLink):
+		GDLink ='https://drive.google.com/uc?export=download&id='
+		fileID =re.search(r"d\/(.*?)\/", dLink)
+		if fileID:
+			fileID =fileID.group()
+			fileID =fileID[2:-1]
+			dLink =GDLink+fileID
+		else:
+			fileID =re.search(r"=(.*?)(\/|&)", dLink)
+			fileID =fileID.group()
+			fileID =fileID[1:-1]
+			dLink =GDLink+fileID
+		return dLink
+
 	@script(
 		description="Converts the given link to a direct link",
 		gesture="kb:alt+nvda+l",
@@ -61,6 +75,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				ui.message("the link is dropbox")
 				link = self.convertDB(link)
 				api.copyToClip(link)
+			elif domain =='https://drive.google.com/':
+				ui.message('google drive link')
+				link =self.convertGD(link)
+				api.copyToClip(link)
+
 		else:
 			ui.message("not dropbox link")
 
