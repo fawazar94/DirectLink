@@ -43,9 +43,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			domain = text1.group()
 		return text1
 
+	def isNumber(self, wNumber):
+		text1 = re.match(r"^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$", wNumber)
+		return text1
+
 	def convertDB(self, dbLink):
-		dbLink = dbLink.replace("?dl=0", '')
-		dbLink = dbLink.replace("www", "dl")
+		dbLink = dbLink.replace("www", "dl").replace("?dl=0", '')
 		return dbLink
 
 	def convertGD(self, dLink):
@@ -62,6 +65,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			dLink =GDLink+fileID
 		return dLink
 
+	def convertWP(self, wNumber):
+		wNumber = wNumber.replace('+', '').replace('-', '').replace('(', '').replace(')', '').replace('.', '').replace(' ', '')
+		wNumber = f"https://api.whatsapp.com/send?phone={wNumber}"
+		return wNumber
+
 	@script(
 		description="Converts the given link to a direct link",
 		gesture="kb:alt+nvda+l",
@@ -70,22 +78,26 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def script_convertingLink(self, gesture):
 		global link
 		link = getSelectedText()
+		link.strip()
 		if self.isLink(link):
 			if domain == "https://www.dropbox.com/":
-				ui.message("the link is dropbox")
 				link = self.convertDB(link)
 				api.copyToClip(link)
+				ui.message("the Dropbox link has been converted and copied to the clipboard, press nvda+alt+shift+l to open in browser")
 			elif domain =='https://drive.google.com/':
-				ui.message('google drive link')
 				link =self.convertGD(link)
 				api.copyToClip(link)
-
+				ui.message("The Google Drive link has been converted and copied to the clipboard, press nvda+alt+shift+l to open in browser")
+		elif self.isNumber(link):
+			link =self.convertWP(link)
+			api.copyToClip(link)
+			ui.message("to open the whatsApp chat in the browser with the selected number, press nvda+alt+shift+l")
 		else:
-			ui.message("not dropbox link")
+			ui.message("please select or copy a dropbox or a google drive link to convert, or a whatsApp number to chat with.")
 
 	@script(
 		description="open the selected link in browser",
-		gesture="kb:alt+nvda+k",
+		gesture="kb:alt+shift+nvda+l",
 		category="DirectLink"
 	)
 	def script_openInBrowser(self, gesture):
