@@ -37,7 +37,7 @@ def getSelectedText() -> str:
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def isLink(self, match):
-		text1 = re.match(r"^https:\/\/(?:www\.dropbox|drive\.google|1drv)\.(com|ms)\/", match)
+		text1 = re.match(r"https:\/\/(?:www\.dropbox|drive\.google)\.com\/", match)
 		if text1:
 			global domain
 			domain = text1.group()
