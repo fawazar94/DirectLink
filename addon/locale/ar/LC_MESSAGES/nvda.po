@@ -1,0 +1,92 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the 'directLink' package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 'directLink' '1.0'\n"
+"Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
+"POT-Creation-Date: 2021-06-18 21:35+0300\n"
+"PO-Revision-Date: 2021-06-18 20:41+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"Language: ar_BH\n"
+
+#: addon\globalPlugins\DirectLink.py:85
+msgid "Converts the given link to a direct link."
+msgstr "تحويل الرابط المعطى إلى رابط مباشر."
+
+#: addon\globalPlugins\DirectLink.py:94
+msgid ""
+"The link has been converted previously, press NVDA+alt+shift+l to open it in "
+"browser."
+msgstr "تم تحويل الرابط مسبقاً، اضغط NVDA+alt+shift+l لفتحه في المتصفح."
+
+#: addon\globalPlugins\DirectLink.py:101
+msgid ""
+"The Dropbox link has been converted and copied to the clipboard, press NVDA"
+"+alt+shift+l to open it in browser."
+msgstr ""
+"تم تحويل رابط Dropbox ونسخه إلى الحافظة، اضغط NVDA+alt+shift+l لفتحه في "
+"المتصفح."
+
+#: addon\globalPlugins\DirectLink.py:106
+msgid ""
+"The Google Drive link has been converted and copied to the clipboard, press "
+"nvda+alt+shift+l to open it in browser."
+msgstr ""
+"تم تحويل رابط Google Drive ونسخه إلى الحافظة، اضغط NVDA+alt+shift+l لفتحه في "
+"المتصفح."
+
+#: addon\globalPlugins\DirectLink.py:111
+msgid ""
+"The oneDrive link has been converted and copied to the clipboard, press nvda"
+"+alt+shift+l to open it in browser."
+msgstr ""
+"تم تحويل رابط oneDrive ونسخه إلى الحافظة، اضغط NVDA+alt+shift+l لفتحه في "
+"المتصفح."
+
+#: addon\globalPlugins\DirectLink.py:116
+msgid ""
+"The WhatsApp link has been generated and copied to the clipboard, press NVDA"
+"+alt+shift+l to open it in browser."
+msgstr ""
+"تم توليد رابط WhatsApp ونسخه إلى الحافظة، اضغط NVDA+alt+shift+l لفتحه في "
+"المتصفح."
+
+#: addon\globalPlugins\DirectLink.py:118
+msgid ""
+"Please select or copy a dropbox link, a google drive link or a oneDrive link "
+"to convert, or a WhatsApp number to chat with."
+msgstr ""
+"قم بتحديد رابط dropbox أو google drive أو oneDrive أو نسخه لتحويله إلى رابط "
+"مباشر أو رابط WhatsApp للدردشة معه."
+
+#: addon\globalPlugins\DirectLink.py:121
+msgid "opens the converted link in browser."
+msgstr "فتح الرابط المحول في المتصفح."
+
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on
+#. to be shown on installation and add-on information found in Add-ons Manager.
+#: buildVars.py:23
+msgid "Direct Link"
+msgstr "الرابط المباشر"
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+#: buildVars.py:26
+#, fuzzy
+msgid ""
+" Converts dropbox, google drive or oneDrive links to direct links, and opens "
+"Whatsapp chats with the given number."
+msgstr ""
+"تحويل روابط dropbox أو google drive أو oneDrive إلى روابط مباشرة وفتح محادثة "
+"WhatsApp مع الرقم المحدد."
