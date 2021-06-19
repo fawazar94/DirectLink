@@ -1,7 +1,7 @@
 # Information #
 - Author: Fawaz Abdul Rahman
 - Version: 1.0
-- [Download Link](https://www.github.com/fawazar94/directlink)
+- [Download Link](https://github.com/fawazar94/DirectLink/releases/download/1.0/directLink-1.0.nvda-addon)
 # Functionality #
 The purpose of the addon is to convert the Dropbox, Google Drive or oneDrive links to a direct link, furthermore, it generates a direct link to a WhatsApp chat with the chosen selected phone number.
 # Usage #
