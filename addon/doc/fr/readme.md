@@ -20,6 +20,7 @@ De plus, vous pouvez partager le lien WhatsApp de votre propre numéro si les ge
 - Certains types de fichiers et de tailles dans Google Drive peuvent vous amener à une page qui dit "Google Drive ne peut pas effectuer l'analyse antivirus de ce fichier", dans ce cas, vous devez cliquer sur le lien télécharger quand même.
 ## Remerciements #
 Un grand merci aux amis suivants, sans qui je n'aurais pas pu réaliser ce projet :
+
 - Qais Alrefai pour avoir testé l'extention et m'avoir fourni divers matériaux à tester, ainsi que pour ses observations et son idée générale pour l'extension.
 - Marina Amir pour la traduction de l'extension en français, l'édition  linguistique et pour avoir testé l'extension.
 - Riad Assoum pour la traduction de l'extension en arabe.
