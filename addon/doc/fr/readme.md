@@ -15,6 +15,7 @@ En outre, le lien direct peut être utilisé pour diffuser un fichier en continu
 De même, si WhatsApp est répandu dans votre pays, plutôt que de créer un nouveau contact à chaque fois que vous avez besoin de chatter avec quelqu'un, qu'il s'agisse d'un client ou d'un support technique, vous pouvez simplement sélectionner le numéro ou le copier et commencer à chatter immédiatement.
 De plus, vous pouvez partager le lien WhatsApp de votre propre numéro si les gens ont besoin de vous contacter si vous travaillez en tant que freelance par exemple.
 ## Notes
+- Le lien d'un dossier ne peut pas être converti ; le lien doit être dirigé vers un fichier.
 - Vous pouvez modifier les touches de raccourci à partir du menu NVDA> préférences> Gestes de commandes.
 - Si vous trouvez un certain format de numéro de téléphone qui n'est pas détecté, vous pouvez m'envoyer un e-mail avec un exemple. 
 - Certains types de fichiers et de tailles dans Google Drive peuvent vous amener à une page qui dit "Google Drive ne peut pas effectuer l'analyse antivirus de ce fichier", dans ce cas, vous devez cliquer sur le lien télécharger quand même.

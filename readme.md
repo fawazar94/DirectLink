@@ -15,6 +15,7 @@ Moreover, the direct link can be used to stream a file or view a file in certain
 Likewise, if WhatsApp is common in your country, rather than creating a new contact each time if you need to chat with someone, weather it is a customer or technical support, you can simply select the number or copy it and start chatting right away.
 Even more, you can share the WhatsApp link of your own number if people usually need to contact you in case you work as a freelancer.
 ## Notes
+- A link of a folder cannot be converted; the link has to be directing to a file.
 - You can change the hotkeys from the NVDA menu> preferences> input gestures.
 - If you find a certain format of a phone number that is not detected, you can email me with an example. 
 - Certain type of files and sizes in Google Drive might take you to a page that says "Google Drive can't scan this file for viruses." in that case, you have to click on download anyway link.
