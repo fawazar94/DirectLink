@@ -7,22 +7,23 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 'directLink' '1.0'\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2021-06-18 21:35+0300\n"
-"PO-Revision-Date: 2021-06-18 22:33+0200\n"
+"POT-Creation-Date: 2021-06-23 15:32+0300\n"
+"PO-Revision-Date: 2021-06-23 14:54+0200\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.0\n"
-"Last-Translator: \n"
+"Last-Translator: Marina Amir <marina.amir7@gmail.com>\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "Language: fr\n"
 
-#: addon\globalPlugins\DirectLink.py:85
+#. translators: appears in the NVDA input help.
+#: addon\globalPlugins\DirectLink.py:94
 msgid "Converts the given link to a direct link."
 msgstr "Convertir le lien donné en un lien direct."
 
-#: addon\globalPlugins\DirectLink.py:94
+#: addon\globalPlugins\DirectLink.py:103
 msgid ""
 "The link has been converted previously, press NVDA+alt+shift+l to open it in "
 "browser."
@@ -30,7 +31,8 @@ msgstr ""
 "Le lien a été déjà converti précédemment, appuyez sur NVDA+alt+shift+l pour "
 "l'ouvrir dans le navigateur."
 
-#: addon\globalPlugins\DirectLink.py:101
+#. translators: the message will be announced when a user converts a dropbox link.
+#: addon\globalPlugins\DirectLink.py:111
 msgid ""
 "The Dropbox link has been converted and copied to the clipboard, press NVDA"
 "+alt+shift+l to open it in browser."
@@ -38,7 +40,8 @@ msgstr ""
 "Le lien Dropbox a été converti et copié dans le presse-papiers, appuyez sur "
 "NVDA+alt+shift+l pour l'ouvrir dans le navigateur."
 
-#: addon\globalPlugins\DirectLink.py:106
+#. translaters: the message will be announced when a user converts a Google Drive link.
+#: addon\globalPlugins\DirectLink.py:117
 msgid ""
 "The Google Drive link has been converted and copied to the clipboard, press "
 "nvda+alt+shift+l to open it in browser."
@@ -46,7 +49,8 @@ msgstr ""
 "Le lien Google Drive a été converti et copié dans le presse-papiers, appuyez "
 "sur NVDA+alt+shift+l pour l'ouvrir dans le navigateur."
 
-#: addon\globalPlugins\DirectLink.py:111
+#. translators: the message will be announced when a user converts a oneDrive link.
+#: addon\globalPlugins\DirectLink.py:123
 msgid ""
 "The oneDrive link has been converted and copied to the clipboard, press nvda"
 "+alt+shift+l to open it in browser."
@@ -54,7 +58,17 @@ msgstr ""
 "Le lien oneDrive a été converti et copié dans le presse-papiers. Appuyez sur "
 "NVDA+alt+shift+l pour l'ouvrir dans le navigateur."
 
-#: addon\globalPlugins\DirectLink.py:116
+#. translators: same as oneDrive message but for oneDrive business links.
+#: addon\globalPlugins\DirectLink.py:129
+msgid ""
+"the oneDrive link has been converted and copied to the clipboard, press alt"
+"+nvda+shift+l to open it in browser"
+msgstr ""
+"Le lien oneDrive a été converti et copié dans le presse-papiers. Appuyez sur "
+"NVDA+alt+shift+l pour l'ouvrir dans le navigateur."
+
+#. translators: the message will be announced when a user converts a whatsapp number.
+#: addon\globalPlugins\DirectLink.py:135
 msgid ""
 "The WhatsApp link has been generated and copied to the clipboard, press NVDA"
 "+alt+shift+l to open it in browser."
@@ -62,7 +76,9 @@ msgstr ""
 "Le lien WhatsApp a été généré et copié dans le presse-papiers, appuyez sur "
 "NVDA+alt+shift+l pour l'ouvrir dans le navigateur."
 
-#: addon\globalPlugins\DirectLink.py:118
+#. translators: the message will be announced when there is nothing selected, or the clipboard is empty,
+#. or if the selected or copied text not a supported service link nor phone number.
+#: addon\globalPlugins\DirectLink.py:139
 msgid ""
 "Please select or copy a dropbox link, a google drive link or a oneDrive link "
 "to convert, or a WhatsApp number to chat with."
@@ -70,7 +86,8 @@ msgstr ""
 "Veuillez sélectionner ou copier un lien dropbox, google drive ou oneDrive à "
 "convertir, ou un numéro WhatsApp pour chatter avec."
 
-#: addon\globalPlugins\DirectLink.py:121
+#. translators: appears in the NVDA input help
+#: addon\globalPlugins\DirectLink.py:143
 msgid "opens the converted link in browser."
 msgstr "Ouvrir le lien converti dans le navigateur."
 

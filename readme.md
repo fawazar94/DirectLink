@@ -3,7 +3,7 @@
 - Version: 1.0
 - [Download Link](https://github.com/fawazar94/DirectLink/releases/download/1.0/directLink-1.0.nvda-addon)
 ## Functionality
-The purpose of the addon is to convert the Dropbox, Google Drive or oneDrive links to a direct link, furthermore, it generates a direct link to a WhatsApp chat with the chosen selected phone number.
+The purpose of the addon is to convert the Dropbox, Google Drive or oneDrive (both personal and business) links to a direct link, furthermore, it generates a direct link to a WhatsApp chat with the chosen selected phone number.
 ## Usage
 - Select or copy a shared Dropbox, Google Drive or oneDrive link
 - Press alt+NVDA+l to convert the link. The resulting URL will be in your clipboard.
@@ -16,6 +16,7 @@ Likewise, if WhatsApp is common in your country, rather than creating a new cont
 Even more, you can share the WhatsApp link of your own number if people usually need to contact you in case you work as a freelancer.
 ## Notes
 - A link of a folder cannot be converted; the link has to be directing to a file.
+- Make sure the link you are sharing is public (anyone with the link can access) in order for it to be successfully converted.
 - You can change the hotkeys from the NVDA menu> preferences> input gestures.
 - If you find a certain format of a phone number that is not detected, you can email me with an example. 
 - Certain type of files and sizes in Google Drive might take you to a page that says "Google Drive can't scan this file for viruses." in that case, you have to click on download anyway link.

@@ -3,7 +3,7 @@
 - Version : 1.0
 - [Lien de téléchargement](https://github.com/fawazar94/DirectLink/releases/download/1.0/directLink-1.0.nvda-addon)
 ## Fonctionnalité
-Le but de l'extension est de convertir les liens Dropbox, Google Drive ou oneDrive en un lien direct, de plus, elle génère un lien direct vers une discussion WhatsApp avec le numéro de téléphone sélectionné.
+Le but de l'extension est de convertir les liens Dropbox, Google Drive ou oneDrive (personnel ou Professionnel) en un lien direct, de plus, elle génère un lien direct vers une discussion WhatsApp avec le numéro de téléphone sélectionné.
 ## Usage
 - Sélectionner ou copier un lien de  Dropbox, Google Drive ou oneDrive
 - Appuyez sur alt+NVDA+l pour convertir le lien. L'URL résultante se trouvera dans votre presse-papiers.
@@ -16,6 +16,7 @@ De même, si WhatsApp est répandu dans votre pays, plutôt que de créer un nou
 De plus, vous pouvez partager le lien WhatsApp de votre propre numéro si les gens ont besoin de vous contacter si vous travaillez en tant que freelance par exemple.
 ## Notes
 - Le lien d'un dossier ne peut pas être converti ; le lien doit être dirigé vers un fichier.
+- Assurez-vous que le lien que vous partagez est public (toute personne disposant du lien peut l'afficher) afin qu'il soit converti avec succès.
 - Vous pouvez modifier les touches de raccourci à partir du menu NVDA> préférences> Gestes de commandes.
 - Si vous trouvez un certain format de numéro de téléphone qui n'est pas détecté, vous pouvez m'envoyer un e-mail avec un exemple. 
 - Certains types de fichiers et de tailles dans Google Drive peuvent vous amener à une page qui dit "Google Drive ne peut pas effectuer l'analyse antivirus de ce fichier", dans ce cas, vous devez cliquer sur le lien télécharger quand même.
