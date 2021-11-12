@@ -23,12 +23,12 @@ se luo suoran linkin WhatsApp-keskusteluun valitulla puhelinnumerolla.
 Suoran linkin avulla saat heti tutun tallennusvalintaikkunan ilman, että
 pilvitallennusyrityksen lataussivu häiritsee ja tarvitsematta etsiä
 latauslinkkiä.  Suoraa linkkiä voidaan lisäksi käyttää tiedoston
-suoratoistoon tai näyttämiseen tietyissä ohjelmissa, kuten mediasoittimissa
+suoratoistoon tai katseluun tietyissä ohjelmissa, kuten mediasoittimissa
 (mikäli ne tukevat URL-osoitteita). WhatsAppia käyttäessäsi voit
 yksinkertaisesti kopioida tai valita numeron ja alkaa heti keskustella sen
 sijaan, että loisit joka kerta uuden yhteystiedon, kun sinun on
 keskusteltava jonkun kanssa. Voit kaiken lisäksi jakaa oman numerosi
-WhatsApp-linkin, mikäli muiden täytyy saada yhteys sinuun.
+WhatsApp-linkin, mikäli muiden täytyy saada yhteyttä sinuun.
 
 ## Huomautuksia
 * Kansiolinkkiä ei voi muuntaa; linkin täytyy osoittaa tiedostoon.
