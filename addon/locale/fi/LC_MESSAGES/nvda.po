@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: directLink\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-22 05:38+0000\n"
-"PO-Revision-Date: 2021-08-02 18:59+0200\n"
-"Last-Translator: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
+"PO-Revision-Date: 2021-12-25 13:39+0200\n"
+"Last-Translator: Jani Kinnunen <janikinnunen340@gmail.com>\n"
 "Language-Team: fi_FI <janikinnunen340@gmail.com>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
@@ -17,6 +17,70 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.6.11\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. translators: appears in the NVDA input help.
+msgid "Converts the given link to a direct link."
+msgstr "Muuntaa annetun linkin suoraksi linkiksi."
+
+msgid ""
+"The link has been converted previously, press NVDA+alt+shift+l to open it in "
+"browser."
+msgstr ""
+"Linkki on jo muunnettu aiemmin. Avaa se selaimessa painamalla NVDA+Alt+Vaihto"
+"+L."
+
+#. translators: the message will be announced when a user converts a dropbox link.
+msgid ""
+"The Dropbox link has been converted and copied to the clipboard, press NVDA"
+"+alt+shift+l to open it in browser."
+msgstr ""
+"Dropbox-linkki on muunnettu ja kopioitu leikepöydälle. Avaa se selaimessa "
+"painamalla NVDA+Alt+Vaihto+L."
+
+#. translaters: the message will be announced when a user converts a Google Drive link.
+msgid ""
+"The Google Drive link has been converted and copied to the clipboard, press "
+"nvda+alt+shift+l to open it in browser."
+msgstr ""
+"Google Drive -linkki on muunnettu ja kopioitu leikepöydälle. Avaa se "
+"selaimessa painamalla NVDA+Alt+Vaihto+L."
+
+#. translators: the message will be announced when a user converts a oneDrive link.
+msgid ""
+"The oneDrive link has been converted and copied to the clipboard, press nvda"
+"+alt+shift+l to open it in browser."
+msgstr ""
+"OneDrive-linkki on muunnettu ja kopioitu leikepöydälle. Avaa se selaimessa "
+"painamalla NVDA+Alt+Vaihto+L."
+
+#. translators: same as oneDrive message but for oneDrive business links.
+msgid ""
+"the oneDrive link has been converted and copied to the clipboard, press alt"
+"+nvda+shift+l to open it in browser"
+msgstr ""
+"OneDrive-linkki on muunnettu ja kopioitu leikepöydälle. Avaa se selaimessa "
+"painamalla NVDA+Alt+Vaihto+L."
+
+#. translators: the message will be announced when a user converts a whatsapp number.
+msgid ""
+"The WhatsApp link has been generated and copied to the clipboard, press NVDA"
+"+alt+shift+l to open it in browser."
+msgstr ""
+"WhatsApp-linkki on luotu ja kopioitu leikepöydälle. Avaa se selaimessa "
+"painamalla NVDA+Alt+Vaihto+L."
+
+#. translators: the message will be announced when there is nothing selected, or the clipboard is empty,
+#. or if the selected or copied text not a supported service link nor phone number.
+msgid ""
+"Please select or copy a dropbox link, a google drive link or a oneDrive link "
+"to convert, or a WhatsApp number to chat with."
+msgstr ""
+"Valitse tai kopioi muunnettava Dropbox-, Google Drive- tai OneDrive-linkki "
+"tai WhatsApp-numero, jonka kanssa haluat keskustella."
+
+#. translators: appears in the NVDA input help
+msgid "opens the converted link in browser."
+msgstr "Avaa muunnetun linkin selaimessa."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on
