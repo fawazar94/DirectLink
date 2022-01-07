@@ -8,14 +8,79 @@ msgstr ""
 "Project-Id-Version: directLink 1.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-22 05:38+0000\n"
-"PO-Revision-Date: 2021-08-04 10:50+0300\n"
+"PO-Revision-Date: 2022-01-02 16:25+0300\n"
+"Last-Translator: Burak Yüksek <burakyuksek94@gmail.com>\n"
+"Language-Team: \n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 1.8.11\n"
+
+#. translators: appears in the NVDA input help.
+msgid "Converts the given link to a direct link."
+msgstr "İstenen bağlantıyı doğrudan bağlantıya dönüştürür."
+
+msgid ""
+"The link has been converted previously, press NVDA+alt+shift+l to open it in "
+"browser."
+msgstr ""
+"Bağlantı daha önce dönüştürülmüş, bağlantıyı tarayıcıda açmak için NVDA+Alt"
+"+Shift+l tuşlarını kullanın."
+
+#. translators: the message will be announced when a user converts a dropbox link.
+msgid ""
+"The Dropbox link has been converted and copied to the clipboard, press NVDA"
+"+alt+shift+l to open it in browser."
+msgstr ""
+"Dropbox bağlantısı dönüştürüldü ve panoya kopyalandı. Bağlantıyı tarayıcıda "
+"açmak için NVDA+Alt+Shift+l tuşlarını kullanın."
+
+#. translaters: the message will be announced when a user converts a Google Drive link.
+msgid ""
+"The Google Drive link has been converted and copied to the clipboard, press "
+"nvda+alt+shift+l to open it in browser."
+msgstr ""
+"Google Drive bağlantısı dönüştürüldü ve panoya kopyalandı. Bağlantıyı "
+"tarayıcıda açmak için NVDA+Alt+Shift+l tuşlarını kullanın."
+
+#. translators: the message will be announced when a user converts a oneDrive link.
+msgid ""
+"The oneDrive link has been converted and copied to the clipboard, press nvda"
+"+alt+shift+l to open it in browser."
+msgstr ""
+"One drive bağlantısı dönüştürüldü ve panoya kopyalandı. Bağlantıyı "
+"tarayıcıda açmak için NVDA+Alt+Shift+l tuşlarını kullanın."
+
+#. translators: same as oneDrive message but for oneDrive business links.
+msgid ""
+"the oneDrive link has been converted and copied to the clipboard, press alt"
+"+nvda+shift+l to open it in browser"
+msgstr ""
+"One drive bağlantısı dönüştürüldü ve panoya kopyalandı. Bağlantıyı "
+"tarayıcıda açmak için NVDA+Alt+Shift+l tuşlarını kullanın."
+
+#. translators: the message will be announced when a user converts a whatsapp number.
+msgid ""
+"The WhatsApp link has been generated and copied to the clipboard, press NVDA"
+"+alt+shift+l to open it in browser."
+msgstr ""
+"Whatsapp bağlantısı oluşturuldu ve panoya kopyalandı. Bağlantıyı tarayıcıda "
+"açmak için NVDA+Alt+Shift+l tuşlarını kullanın."
+
+#. translators: the message will be announced when there is nothing selected, or the clipboard is empty,
+#. or if the selected or copied text not a supported service link nor phone number.
+msgid ""
+"Please select or copy a dropbox link, a google drive link or a oneDrive link "
+"to convert, or a WhatsApp number to chat with."
+msgstr ""
+"Dönüştürmek için bir Dropbox, Google Drive veya One Drive bağlantısı seçin "
+"veya kopyalayın ya da mesajlaşmak istediğiniz Whatsapp numarasını seçin veya "
+"kopyalayın. "
+
+#. translators: appears in the NVDA input help
+msgid "opens the converted link in browser."
+msgstr "Dönüştürülen bağlantıyı tarayıcıda açar."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on
