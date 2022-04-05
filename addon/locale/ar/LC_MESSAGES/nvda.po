@@ -20,18 +20,15 @@ msgstr ""
 "Language: ar\n"
 
 #. translators: appears in the NVDA input help.
-#: addon\globalPlugins\DirectLink.py:94
 msgid "Converts the given link to a direct link."
 msgstr "تحويل الرابط المعطى إلى رابط مباشر."
 
-#: addon\globalPlugins\DirectLink.py:103
 msgid ""
 "The link has been converted previously, press NVDA+alt+shift+l to open it in "
 "browser."
 msgstr "تم تحويل الرابط مسبقاً، اضغط NVDA+alt+shift+l لفتحه في المتصفح."
 
 #. translators: the message will be announced when a user converts a dropbox link.
-#: addon\globalPlugins\DirectLink.py:111
 msgid ""
 "The Dropbox link has been converted and copied to the clipboard, press NVDA"
 "+alt+shift+l to open it in browser."
@@ -40,7 +37,6 @@ msgstr ""
 "المتصفح."
 
 #. translaters: the message will be announced when a user converts a Google Drive link.
-#: addon\globalPlugins\DirectLink.py:117
 msgid ""
 "The Google Drive link has been converted and copied to the clipboard, press "
 "nvda+alt+shift+l to open it in browser."
@@ -49,7 +45,6 @@ msgstr ""
 "المتصفح."
 
 #. translators: the message will be announced when a user converts a oneDrive link.
-#: addon\globalPlugins\DirectLink.py:123
 msgid ""
 "The oneDrive link has been converted and copied to the clipboard, press nvda"
 "+alt+shift+l to open it in browser."
@@ -58,7 +53,6 @@ msgstr ""
 "المتصفح."
 
 #. translators: same as oneDrive message but for oneDrive business links.
-#: addon\globalPlugins\DirectLink.py:129
 msgid ""
 "the oneDrive link has been converted and copied to the clipboard, press alt"
 "+nvda+shift+l to open it in browser"
@@ -67,7 +61,6 @@ msgstr ""
 "المتصفح."
 
 #. translators: the message will be announced when a user converts a whatsapp number.
-#: addon\globalPlugins\DirectLink.py:135
 msgid ""
 "The WhatsApp link has been generated and copied to the clipboard, press NVDA"
 "+alt+shift+l to open it in browser."
@@ -77,7 +70,6 @@ msgstr ""
 
 #. translators: the message will be announced when there is nothing selected, or the clipboard is empty,
 #. or if the selected or copied text not a supported service link nor phone number.
-#: addon\globalPlugins\DirectLink.py:139
 msgid ""
 "Please select or copy a dropbox link, a google drive link or a oneDrive link "
 "to convert, or a WhatsApp number to chat with."
@@ -86,20 +78,17 @@ msgstr ""
 "مباشر أو رابط WhatsApp للدردشة معه."
 
 #. translators: appears in the NVDA input help
-#: addon\globalPlugins\DirectLink.py:143
 msgid "opens the converted link in browser."
 msgstr "فتح الرابط المحول في المتصفح."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on
 #. to be shown on installation and add-on information found in Add-ons Manager.
-#: buildVars.py:23
 msgid "Direct Link"
 msgstr "الرابط المباشر"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-#: buildVars.py:26
 msgid ""
 " Converts dropbox, google drive or oneDrive links to direct links, and opens "
 "Whatsapp chats with the given number."
