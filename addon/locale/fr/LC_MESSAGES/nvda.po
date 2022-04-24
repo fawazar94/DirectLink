@@ -5,80 +5,80 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 'directLink' '1.0'\n"
+"Project-Id-Version: 'directLink' '2.0'\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2021-06-23 15:32+0300\n"
-"PO-Revision-Date: 2021-06-23 14:54+0200\n"
+"POT-Creation-Date: 2022-04-22 09:01+0300\n"
+"PO-Revision-Date: 2022-04-24 05:42+0200\n"
+"Last-Translator: Marina Amir <marina.amir7@gmail.com>\n"
 "Language-Team: \n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0\n"
-"Last-Translator: Marina Amir <marina.amir7@gmail.com>\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"Language: fr\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #. translators: appears in the NVDA input help.
-#: addon\globalPlugins\DirectLink.py:94
+#: addon\globalPlugins\DirectLink.py:102
 msgid "Converts the given link to a direct link."
-msgstr "Convertir le lien donné en un lien direct."
+msgstr "Convertit le lien donné en un lien direct."
 
-#: addon\globalPlugins\DirectLink.py:103
+#: addon\globalPlugins\DirectLink.py:111
 msgid ""
-"The link has been converted previously, press NVDA+alt+shift+l to open it in "
+"The link has been previously converted, press NVDA+alt+o to open it in "
 "browser."
 msgstr ""
-"Le lien a été déjà converti précédemment, appuyez sur NVDA+alt+shift+l pour "
+"Le lien a été déjà converti précédemment, appuyez sur NVDA+alt+o pour "
 "l'ouvrir dans le navigateur."
 
 #. translators: the message will be announced when a user converts a dropbox link.
-#: addon\globalPlugins\DirectLink.py:111
+#: addon\globalPlugins\DirectLink.py:119
 msgid ""
 "The Dropbox link has been converted and copied to the clipboard, press NVDA"
-"+alt+shift+l to open it in browser."
+"+alt+o to open it in browser."
 msgstr ""
 "Le lien Dropbox a été converti et copié dans le presse-papiers, appuyez sur "
-"NVDA+alt+shift+l pour l'ouvrir dans le navigateur."
+"NVDA+alt+o pour l'ouvrir dans le navigateur."
 
 #. translaters: the message will be announced when a user converts a Google Drive link.
-#: addon\globalPlugins\DirectLink.py:117
+#: addon\globalPlugins\DirectLink.py:125
 msgid ""
 "The Google Drive link has been converted and copied to the clipboard, press "
-"nvda+alt+shift+l to open it in browser."
+"nvda+alt+o to open it in browser."
 msgstr ""
 "Le lien Google Drive a été converti et copié dans le presse-papiers, appuyez "
-"sur NVDA+alt+shift+l pour l'ouvrir dans le navigateur."
+"sur nvda+alt+o pour l'ouvrir dans le navigateur."
 
 #. translators: the message will be announced when a user converts a oneDrive link.
-#: addon\globalPlugins\DirectLink.py:123
+#: addon\globalPlugins\DirectLink.py:131
 msgid ""
 "The oneDrive link has been converted and copied to the clipboard, press nvda"
-"+alt+shift+l to open it in browser."
+"+alt+o to open it in browser."
 msgstr ""
 "Le lien oneDrive a été converti et copié dans le presse-papiers. Appuyez sur "
-"NVDA+alt+shift+l pour l'ouvrir dans le navigateur."
+"nvda+alt+o pour l'ouvrir dans le navigateur."
 
 #. translators: same as oneDrive message but for oneDrive business links.
-#: addon\globalPlugins\DirectLink.py:129
+#: addon\globalPlugins\DirectLink.py:137
 msgid ""
 "the oneDrive link has been converted and copied to the clipboard, press alt"
-"+nvda+shift+l to open it in browser"
+"+nvda+o to open it in browser"
 msgstr ""
 "Le lien oneDrive a été converti et copié dans le presse-papiers. Appuyez sur "
-"NVDA+alt+shift+l pour l'ouvrir dans le navigateur."
+"nvda+alt+o pour l'ouvrir dans le navigateur."
 
 #. translators: the message will be announced when a user converts a whatsapp number.
-#: addon\globalPlugins\DirectLink.py:135
+#: addon\globalPlugins\DirectLink.py:143
 msgid ""
 "The WhatsApp link has been generated and copied to the clipboard, press NVDA"
-"+alt+shift+l to open it in browser."
+"+alt+o to open it in browser."
 msgstr ""
 "Le lien WhatsApp a été généré et copié dans le presse-papiers, appuyez sur "
-"NVDA+alt+shift+l pour l'ouvrir dans le navigateur."
+"NVDA+alt+o pour l'ouvrir dans le navigateur."
 
 #. translators: the message will be announced when there is nothing selected, or the clipboard is empty,
 #. or if the selected or copied text not a supported service link nor phone number.
-#: addon\globalPlugins\DirectLink.py:139
+#: addon\globalPlugins\DirectLink.py:147
 msgid ""
 "Please select or copy a dropbox link, a google drive link or a oneDrive link "
 "to convert, or a WhatsApp number to chat with."
@@ -87,8 +87,51 @@ msgstr ""
 "convertir, ou un numéro WhatsApp pour chatter avec."
 
 #. translators: appears in the NVDA input help
-#: addon\globalPlugins\DirectLink.py:143
-msgid "opens the converted link in browser."
+#: addon\globalPlugins\DirectLink.py:151
+msgid "Converts a username or a number to a Telegram link"
+msgstr ""
+"Convertit un nom d'utilisateur ou un numéro de téléphone en un lien Telegram."
+
+#: addon\globalPlugins\DirectLink.py:161
+msgid "Your clipboard is empty or does not contain text."
+msgstr "Votre presse-papiers est vide ou ne contient pas de texte."
+
+#: addon\globalPlugins\DirectLink.py:164
+msgid ""
+"The Telegram link has been previously generated, press NVDA+alt+o to open it "
+"in browser."
+msgstr ""
+"Le lien Telegram a été déjà converti précédemment, appuyez sur NVDA+alt+o "
+"pour l'ouvrir dans le navigateur."
+
+#. translators: the message announces after converting a number to a telegram link
+#: addon\globalPlugins\DirectLink.py:171
+msgid ""
+"The phone number has been converted, press NVDA+Alt+O to open the link in "
+"browser."
+msgstr ""
+"Le numéro de téléphone a été converti, appuyez sur NVDA+Alt+O pour ouvrir le "
+"lien dans le navigateur."
+
+#. translators: the message announces when the user converts a username to telegram link
+#: addon\globalPlugins\DirectLink.py:177
+msgid ""
+"The username has been converted, press NVDA+alt+o to open the link in "
+"browser."
+msgstr ""
+"Le nom d'utilisateur a été converti, appuyez sur NVDA+alt+o pour ouvrir le "
+"lien dans le navigateur."
+
+#. translators: the message announces when the selection is not a valid number or a username
+#: addon\globalPlugins\DirectLink.py:180
+msgid "Select a valid phone number or username to generate its Telegram link."
+msgstr ""
+"Sélectionnez un numéro de téléphone ou un nom d'utilisateur valide pour "
+"générer son lien Telegram."
+
+#. translators: appears in the NVDA input help
+#: addon\globalPlugins\DirectLink.py:184
+msgid "Opens the converted link in browser."
 msgstr "Ouvrir le lien converti dans le navigateur."
 
 #. Add-on summary, usually the user visible name of the addon.
@@ -103,7 +146,7 @@ msgstr "Lien direct"
 #: buildVars.py:26
 msgid ""
 " Converts dropbox, google drive or oneDrive links to direct links, and opens "
-"Whatsapp chats with the given number."
+"Whatsapp and Telegram chats with the given number."
 msgstr ""
 "Convertit les liens dropbox, google drive ou oneDrive en liens directs, et "
-"ouvre les discussions Whatsapp avec le numéro de téléphone donné."
+"ouvre les discussions Whatsapp et Telegram avec le numéro de téléphone donné."

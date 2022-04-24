@@ -1,7 +1,8 @@
 # directLink
 # Converts dropbox, google drive or oneDrive links to direct links,
-# and opens Whatsapp chats with the given number.
+# and opens Whatsapp and Telegram chats with the given number.
 # copyright 2021 Fawaz Abdul rahman, released under GPL
+
 
 import globalPluginHandler
 import ui
@@ -89,6 +90,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		wNumber = f"https://api.whatsapp.com/send?phone={wNumber}"
 		return wNumber
 
+	def convertTelegram(self, telegram):
+		# for telegram phone numbers
+		telegram = telegram.replace('+', '').replace('-', '').replace('(', '').replace(')', '').replace('.', '').replace(' ', '')
+		telegram = f"https://t.me/+{telegram}"
+		return telegram
+
+
 	@script(
 		# translators: appears in the NVDA input help.
 		description=_("Converts the given link to a direct link."),
@@ -100,7 +108,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		link = getSelectedText()
 		link.strip()
 		if link == self.converted:
-			ui.message(_("The link has been converted previously, press NVDA+alt+shift+l to open it in browser."))
+			ui.message(_("The link has been previously converted, press NVDA+alt+o to open it in browser."))
 		else:
 			if self.isLink(link):
 				if domain == "https://www.dropbox.com/":
@@ -108,31 +116,31 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 					self.converted = link
 					api.copyToClip(link)
 					# translators: the message will be announced when a user converts a dropbox link.
-					ui.message(_("The Dropbox link has been converted and copied to the clipboard, press NVDA+alt+shift+l to open it in browser."))
+					ui.message(_("The Dropbox link has been converted and copied to the clipboard, press NVDA+alt+o to open it in browser."))
 				elif domain == 'https://drive.google.com/':
 					link = self.convertGD(link)
 					self.converted = link
 					api.copyToClip(link)
 					# translaters: the message will be announced when a user converts a Google Drive link.
-					ui.message(_("The Google Drive link has been converted and copied to the clipboard, press nvda+alt+shift+l to open it in browser."))
+					ui.message(_("The Google Drive link has been converted and copied to the clipboard, press nvda+alt+o to open it in browser."))
 				elif domain == 'https://1drv.ms/':
 					link = self.convert1d(link)
 					self.converted = link
 					api.copyToClip(link)
 					# translators: the message will be announced when a user converts a oneDrive link.
-					ui.message(_("The oneDrive link has been converted and copied to the clipboard, press nvda+alt+shift+l to open it in browser."))
+					ui.message(_("The oneDrive link has been converted and copied to the clipboard, press nvda+alt+o to open it in browser."))
 				else:
 					link = self.convert1DBus(link)
 					self.converted = link
 					api.copyToClip(link)
 					# translators: same as oneDrive message but for oneDrive business links.
-					ui.message(_("the oneDrive link has been converted and copied to the clipboard, press alt+nvda+shift+l to open it in browser"))
+					ui.message(_("the oneDrive link has been converted and copied to the clipboard, press alt+nvda+o to open it in browser"))
 			elif self.isNumber(link):
 				link = self.convertWP(link)
 				self.converted = link
 				api.copyToClip(link)
 				# translators: the message will be announced when a user converts a whatsapp number.
-				ui.message(_("The WhatsApp link has been generated and copied to the clipboard, press NVDA+alt+shift+l to open it in browser."))
+				ui.message(_("The WhatsApp link has been generated and copied to the clipboard, press NVDA+alt+o to open it in browser."))
 			else:
 				# translators: the message will be announced when there is nothing selected, or the clipboard is empty,
 				# or if the selected or copied text not a supported service link nor phone number.
@@ -140,8 +148,41 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	@script(
 		# translators: appears in the NVDA input help
-		description=_("opens the converted link in browser."),
-		gesture="kb:alt+shift+nvda+l",
+		description=_("Converts a username or a number to a Telegram link"),
+		gesture="kb:nvda+alt+t",
+		category="DirectLink"
+	)
+	def script_telegram(self, gesture):
+		global link
+		link = getSelectedText()
+		try:
+			link = link.split()[0]
+		except:
+			ui.message(_("Your clipboard is empty or does not contain text."))
+		else:
+			if link == self.converted:
+				ui.message(_("The Telegram link has been previously generated, press NVDA+alt+o to open it in browser."))
+			else:
+				if self.isNumber(link):
+					link = self.convertTelegram(link)
+					api.copyToClip(link)
+					self.converted = link
+					# translators: the message announces after converting a number to a telegram link
+					ui.message(_("The phone number has been converted, press NVDA+Alt+O to open the link in browser."))
+				elif re.search(r"^\w{5,32}$", link):
+					link = f"https://t.me/{link}"
+					self.converted = link
+					api.copyToClip(link)
+					# translators: the message announces when the user converts a username to telegram link
+					ui.message(_("The username has been converted, press NVDA+alt+o to open the link in browser."))
+				else:
+					# translators: the message announces when the selection is not a valid number or a username
+					ui.message(_("Select a valid phone number or username to generate its Telegram link."))
+
+	@script(
+		# translators: appears in the NVDA input help
+		description=_("Opens the converted link in browser."),
+		gesture="kb:nvda+alt+o",
 		category="DirectLink"
 	)
 	def script_openInBrowser(self, gesture):
