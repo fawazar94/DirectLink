@@ -186,4 +186,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		category="DirectLink"
 	)
 	def script_openInBrowser(self, gesture):
-		os.startfile(link)
+		try:
+			os.startfile(self.converted)
+		except:
+			# translators: this message  announces if there is no successfully converted link in the clibboard.
+			ui.message(_("No link has been converted."))

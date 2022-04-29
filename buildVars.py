@@ -25,7 +25,7 @@ addon_info = {
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 	"addon_description": _(""" Converts dropbox, google drive or oneDrive links to direct links, and opens Whatsapp and Telegram chats with the given number."""),
 	# version
-	"addon_version": "2.0",
+	"addon_version": "2.1",
 	# Author(s)
 	"addon_author": "Fawaz Abdul rahman <fawaz.ar94@gmail.com>",
 	# URL for the add-on documentation support
@@ -50,7 +50,7 @@ addon_info = {
 # pythonSources = ["addon/globalPlugins/*.py"]
 # For more information on SCons Glob expressions please take a look at:
 # https://scons.org/doc/production/HTML/scons-user/apd.html
-pythonSources = ["addon/globalPlugins/*.py"]
+pythonSources = ["addon/globalPlugins/directlink/*.py"]
 
 # Files that contain strings for translation. Usually your python sources
 i18nSources = pythonSources + ["buildVars.py"]
