@@ -12,22 +12,22 @@ umzuwandeln, außerdem generiert es einen direkten Link zu einem
 WhatsApp-Chat mit der ausgewählten Telefonnummer.
 
 ## Verwendung
-* Wählen Sie einen freigegebenen Dropbox-, Google Drive- oder oneDrive-Link
+* Wählen Sie einen freigegebenen Dropbox-, Google Drive- oder OneDrive-Link
   aus oder kopieren Sie diesen
-* Drücken Sie ALT+NVDA+L, um den Link zu konvertieren. Die erhaltene URL
+* Drücken Sie Alt+NVDA+L, um den Link umzuwandeln. Die erhaltene URL
   befindet sich in Ihrer Zwischenablage.
-* Das gleiche gilt für die Telefonnummer., Kopieren oder markieren Sie die
-  Nummer, mit der Sie Chatten oder etwas teilen wollen  und drücken Sie  die
-  selbe Tastenkombination (alt+NVDA+L).
-* Wenn Sie  den erhaltenen Link im Browser öffnen wollen,, drücken Sie
-  Alt+NVDA+Umschalt+L.
+* Das gleiche gilt für die Telefonnummer. Kopieren oder markieren Sie die
+  Nummer, mit der Sie Chatten oder etwas teilen möchten und drücken Sie die
+  selbe Tastenkombination (Alt+Umschalt+NVDA+L).
+* Wenn Sie den erhaltenen Link im Browser öffnen möchten, drücken Sie
+  Alt+Umschalt+NVDA+L.
 
 ## Warum ein Direktlink?
 Mit Hilfe eines Direktlinks erhalten Sie den bekannten
 Speichern-unter-Dialog, wenn Sie den Link in Ihrem Browser öffnen. Die Suche
 nach dem Downloadlink auf der Anbieterseite bleibt Ihnen erspart. Des
 weiteren können Sie den Direktlink nutzen, um Dateien zu streamen oder diese
-in  Programmen wie Mediaplayern zu betrachten, falls diese URLs öffnen
+in  Programmen wie einem Media-Player zu betrachten, falls diese URLs öffnen
 können. Wenn WhatsApp in Ihrem Land gebräuchlich ist, brauchen Sie nicht
 jedes mal einen Kontakt erstellen, um bspw. mit einem Kunden oder
 technischer Unterstützung zu kommunizieren. Es reicht, die Nummer zu

@@ -9,16 +9,80 @@ msgstr ""
 "Project-Id-Version: directLink 1.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-22 05:38+0000\n"
-"PO-Revision-Date: 2021-11-08 00:07+0100\n"
+"PO-Revision-Date: 2022-04-24 12:51+0200\n"
+"Last-Translator: Milo Ivir <mail@milotype.de>\n"
+"Language-Team: \n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
-"Last-Translator: Milo Ivir <mail@milotype.de>\n"
-"Language-Team: \n"
 "X-Generator: Poedit 3.0\n"
+
+#. translators: appears in the NVDA input help.
+msgid "Converts the given link to a direct link."
+msgstr "Pretvara zadanu poveznicu u izravnu poveznicu."
+
+msgid ""
+"The link has been converted previously, press NVDA+alt+shift+l to open it in "
+"browser."
+msgstr ""
+"Poveznica je prethodno pretvorena. Za otvaranje poveznice u pregledniku "
+"pritisni NVDA+alt+šift+l."
+
+#. translators: the message will be announced when a user converts a dropbox link.
+msgid ""
+"The Dropbox link has been converted and copied to the clipboard, press NVDA"
+"+alt+shift+l to open it in browser."
+msgstr ""
+"Dropbox poveznica je pretvorena i kopirana u međuspremnik. Za otvaranje "
+"poveznice u pregledniku pritisni NVDA+alt+šift+l."
+
+#. translaters: the message will be announced when a user converts a Google Drive link.
+msgid ""
+"The Google Drive link has been converted and copied to the clipboard, press "
+"nvda+alt+shift+l to open it in browser."
+msgstr ""
+"Google Drive poveznica je pretvorena i kopirana u međuspremnik. Za otvaranje "
+"poveznice u pregledniku pritisni NVDA+alt+šift+l."
+
+#. translators: the message will be announced when a user converts a oneDrive link.
+msgid ""
+"The oneDrive link has been converted and copied to the clipboard, press nvda"
+"+alt+shift+l to open it in browser."
+msgstr ""
+"oneDrive poveznica je pretvorena i kopirana u međuspremnik. Za otvaranje "
+"poveznice u pregledniku pritisni NVDA+alt+šift+l."
+
+#. translators: same as oneDrive message but for oneDrive business links.
+msgid ""
+"the oneDrive link has been converted and copied to the clipboard, press alt"
+"+nvda+shift+l to open it in browser"
+msgstr ""
+"oneDrive poveznica je pretvorena i kopirana u međuspremnik. Za otvaranje "
+"poveznice u pregledniku pritisni NVDA+alt+šift+l"
+
+#. translators: the message will be announced when a user converts a whatsapp number.
+msgid ""
+"The WhatsApp link has been generated and copied to the clipboard, press NVDA"
+"+alt+shift+l to open it in browser."
+msgstr ""
+"WhatsApp poveznica je pretvorena i kopirana u međuspremnik. Za otvaranje "
+"poveznice u pregledniku pritisni NVDA+alt+šift+l."
+
+#. translators: the message will be announced when there is nothing selected, or the clipboard is empty,
+#. or if the selected or copied text not a supported service link nor phone number.
+msgid ""
+"Please select or copy a dropbox link, a google drive link or a oneDrive link "
+"to convert, or a WhatsApp number to chat with."
+msgstr ""
+"Odaberi ili kopiraj dropbox poveznicu, Google disk poveznicu ili oneDrive "
+"poveznicu za pretvaranje ili broj WhatsAppa za razgovor."
+
+#. translators: appears in the NVDA input help
+msgid "opens the converted link in browser."
+msgstr "otvara pretvorenu poveznicu u pregledniku."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on
