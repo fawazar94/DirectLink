@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: directLink 1.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-22 05:38+0000\n"
-"PO-Revision-Date: 2021-12-24 08:22+0200\n"
+"PO-Revision-Date: 2022-05-06 08:04+0300\n"
 "Last-Translator: Kostadin Kolev <k_kolev1985@mail.bg>\n"
 "Language-Team: \n"
 "Language: bg\n"
@@ -16,70 +16,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.0.1\n"
-
-#. translators: appears in the NVDA input help.
-msgid "Converts the given link to a direct link."
-msgstr "Преобразува подадената връзка в директна връзка."
-
-msgid ""
-"The link has been converted previously, press NVDA+alt+shift+l to open it in "
-"browser."
-msgstr ""
-"Връзката е вече преобразувана. Натиснете NVDA+Alt+Shift+L, за да я отворите "
-"в браузъра."
-
-#. translators: the message will be announced when a user converts a dropbox link.
-msgid ""
-"The Dropbox link has been converted and copied to the clipboard, press NVDA"
-"+alt+shift+l to open it in browser."
-msgstr ""
-"Връзката към Dropbox е преобразувана и копирана в клипборда. Натиснете NVDA"
-"+Alt+Shift+L, за да я отворите в браузъра."
-
-#. translaters: the message will be announced when a user converts a Google Drive link.
-msgid ""
-"The Google Drive link has been converted and copied to the clipboard, press "
-"nvda+alt+shift+l to open it in browser."
-msgstr ""
-"Връзката към Google Диск е преобразувана и копирана в клипборда. Натиснете "
-"NVDA+Alt+Shift+L, за да я отворите в браузъра."
-
-#. translators: the message will be announced when a user converts a oneDrive link.
-msgid ""
-"The oneDrive link has been converted and copied to the clipboard, press nvda"
-"+alt+shift+l to open it in browser."
-msgstr ""
-"Връзката към OneDrive е преобразувана и копирана в клипборда. Натиснете NVDA"
-"+Alt+Shift+L, за да я отворите в браузъра."
-
-#. translators: same as oneDrive message but for oneDrive business links.
-msgid ""
-"the oneDrive link has been converted and copied to the clipboard, press alt"
-"+nvda+shift+l to open it in browser"
-msgstr ""
-"Връзката към OneDrive е преобразувана и копирана в клипборда. Натиснете NVDA"
-"+Alt+Shift+L, за да я отворите в браузъра."
-
-#. translators: the message will be announced when a user converts a whatsapp number.
-msgid ""
-"The WhatsApp link has been generated and copied to the clipboard, press NVDA"
-"+alt+shift+l to open it in browser."
-msgstr ""
-"Връзката към WhatsApp е генерирана и копирана в клипборда. Натиснете NVDA+Alt"
-"+Shift+L, за да я отворите в браузъра."
-
-#. translators: the message will be announced when there is nothing selected, or the clipboard is empty,
-#. or if the selected or copied text not a supported service link nor phone number.
-msgid ""
-"Please select or copy a dropbox link, a google drive link or a oneDrive link "
-"to convert, or a WhatsApp number to chat with."
-msgstr ""
-"Моля, изберете или копирайте връзка към Dropbox, Google Диск или OneDrive, "
-"за да я конвертирате, или номер на WhatsApp, с който да разговаряте."
-
-#. translators: appears in the NVDA input help
-msgid "opens the converted link in browser."
-msgstr "отваря преобразуваната връзка в браузъра."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on
@@ -91,7 +27,63 @@ msgstr "Директна препратка"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid ""
 " Converts dropbox, google drive or oneDrive links to direct links, and opens "
-"Whatsapp chats with the given number."
+"Whatsapp and Telegram chats with the given number."
 msgstr ""
 "Преобразува връзки на Dropbox, Google Диск или OneDrive в директни препратки "
-"и отваря чатове в WhatsApp с посочения номер."
+"и отваря чатове в WhatsApp и Telegram с посочения номер."
+
+#~ msgid "Converts the given link to a direct link."
+#~ msgstr "Преобразува подадената връзка в директна връзка."
+
+#~ msgid ""
+#~ "The link has been converted previously, press NVDA+alt+shift+l to open it "
+#~ "in browser."
+#~ msgstr ""
+#~ "Връзката е вече преобразувана. Натиснете NVDA+Alt+Shift+L, за да я "
+#~ "отворите в браузъра."
+
+#~ msgid ""
+#~ "The Dropbox link has been converted and copied to the clipboard, press "
+#~ "NVDA+alt+shift+l to open it in browser."
+#~ msgstr ""
+#~ "Връзката към Dropbox е преобразувана и копирана в клипборда. Натиснете "
+#~ "NVDA+Alt+Shift+L, за да я отворите в браузъра."
+
+#~ msgid ""
+#~ "The Google Drive link has been converted and copied to the clipboard, "
+#~ "press nvda+alt+shift+l to open it in browser."
+#~ msgstr ""
+#~ "Връзката към Google Диск е преобразувана и копирана в клипборда. "
+#~ "Натиснете NVDA+Alt+Shift+L, за да я отворите в браузъра."
+
+#~ msgid ""
+#~ "The oneDrive link has been converted and copied to the clipboard, press "
+#~ "nvda+alt+shift+l to open it in browser."
+#~ msgstr ""
+#~ "Връзката към OneDrive е преобразувана и копирана в клипборда. Натиснете "
+#~ "NVDA+Alt+Shift+L, за да я отворите в браузъра."
+
+#~ msgid ""
+#~ "the oneDrive link has been converted and copied to the clipboard, press "
+#~ "alt+nvda+shift+l to open it in browser"
+#~ msgstr ""
+#~ "Връзката към OneDrive е преобразувана и копирана в клипборда. Натиснете "
+#~ "NVDA+Alt+Shift+L, за да я отворите в браузъра."
+
+#~ msgid ""
+#~ "The WhatsApp link has been generated and copied to the clipboard, press "
+#~ "NVDA+alt+shift+l to open it in browser."
+#~ msgstr ""
+#~ "Връзката към WhatsApp е генерирана и копирана в клипборда. Натиснете NVDA"
+#~ "+Alt+Shift+L, за да я отворите в браузъра."
+
+#~ msgid ""
+#~ "Please select or copy a dropbox link, a google drive link or a oneDrive "
+#~ "link to convert, or a WhatsApp number to chat with."
+#~ msgstr ""
+#~ "Моля, изберете или копирайте връзка към Dropbox, Google Диск или "
+#~ "OneDrive, за да я конвертирате, или номер на WhatsApp, с който да "
+#~ "разговаряте."
+
+#~ msgid "opens the converted link in browser."
+#~ msgstr "отваря преобразуваната връзка в браузъра."
