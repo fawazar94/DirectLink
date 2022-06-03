@@ -5,67 +5,67 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: directLink\n"
+"Project-Id-Version: directLink 2.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
-"POT-Creation-Date: 2021-07-22 05:38+0000\n"
-"PO-Revision-Date: 2022-05-27 20:29+0200\n"
-"Last-Translator: Jani Kinnunen <janikinnunen340@gmail.com>\n"
-"Language-Team: fi_FI <janikinnunen340@gmail.com>\n"
-"Language: fi\n"
+"POT-Creation-Date: 2022-05-06 04:08+0000\n"
+"PO-Revision-Date: 2022-05-27 13:54+0300\n"
+"Last-Translator: Volodymyr Pyrih <vp88.mobile@gmail.com>\n"
+"Language-Team: \n"
+"Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.11\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #. translators: appears in the NVDA input help.
 msgid "Converts the given link to a direct link."
-msgstr "Muuntaa annetun linkin suoraksi linkiksi."
+msgstr "Перетворює надане посилання на пряме посилання."
 
 msgid ""
 "The link has been previously converted, press NVDA+alt+o to open it in "
 "browser."
-msgstr "Linkki on muunnettu aiemmin. Avaa se selaimessa painamalla NVDA+Alt+O."
+msgstr ""
+"Посилання перетворено, натисніть NVDA+alt+o, щоб відкрити його у браузері."
 
 #. translators: the message will be announced when a user converts a dropbox link.
 msgid ""
 "The Dropbox link has been converted and copied to the clipboard, press NVDA"
 "+alt+o to open it in browser."
 msgstr ""
-"Dropbox-linkki on muunnettu ja kopioitu leikepöydälle. Avaa se selaimessa "
-"painamalla NVDA+Alt+O."
+"Посилання на Dropbox перетворено і скопійовано в буфер обміну, натисніть NVDA"
+"+alt+o, щоб відкрити його у браузері."
 
 #. translaters: the message will be announced when a user converts a Google Drive link.
 msgid ""
 "The Google Drive link has been converted and copied to the clipboard, press "
 "nvda+alt+o to open it in browser."
 msgstr ""
-"Google Drive -linkki on muunnettu ja kopioitu leikepöydälle. Avaa se "
-"selaimessa painamalla NVDA+Alt+O."
+"Посилання на Google диск перетворено і скопійовано в буфер обміну, натисніть "
+"NVDA+alt+o, щоб відкрити його у браузері."
 
 #. translators: the message will be announced when a user converts a oneDrive link.
 msgid ""
 "The oneDrive link has been converted and copied to the clipboard, press nvda"
 "+alt+o to open it in browser."
 msgstr ""
-"OneDrive-linkki on muunnettu ja kopioitu leikepöydälle. Avaa se selaimessa "
-"painamalla NVDA+Alt+O."
+"Посилання на oneDrive перетворено і скопійовано в буфер обміну, натисніть "
+"NVDA+alt+o, щоб відкрити його у браузері."
 
 #. translators: same as oneDrive message but for oneDrive business links.
 msgid ""
 "the oneDrive link has been converted and copied to the clipboard, press alt"
 "+nvda+o to open it in browser"
 msgstr ""
-"OneDrive-linkki on muunnettu ja kopioitu leikepöydälle. Avaa se selaimessa "
-"painamalla NVDA+Alt+O."
+"посилання на oneDrive перетворено і скопійовано в буфер обміну, натисніть alt"
+"+nvda+o, щоб відкрити його у браузері"
 
 #. translators: the message will be announced when a user converts a whatsapp number.
 msgid ""
 "The WhatsApp link has been generated and copied to the clipboard, press NVDA"
 "+alt+o to open it in browser."
 msgstr ""
-"WhatsApp-linkki on luotu ja kopioitu leikepöydälle. Avaa se selaimessa "
-"painamalla NVDA+Alt+O."
+"Посилання на WhatsApp згенеровано і скопійовано в буфер обміну, натисніть "
+"NVDA+alt+o, щоб відкрити його у браузері."
 
 #. translators: the message will be announced when there is nothing selected, or the clipboard is empty,
 #. or if the selected or copied text not a supported service link nor phone number.
@@ -73,58 +73,59 @@ msgid ""
 "Please select or copy a dropbox link, a google drive link or a oneDrive link "
 "to convert, or a WhatsApp number to chat with."
 msgstr ""
-"Valitse tai kopioi muunnettava Dropbox-, Google Drive- tai OneDrive-linkki "
-"tai WhatsApp-numero, jonka kanssa haluat keskustella."
+"Будь ласка оберіть або скопіюйте посилання на Dropbox, Google Диск чи "
+"oneDrive для його перетворення, або номер WhatsApp для початку спілкування з "
+"ним."
 
 #. translators: appears in the NVDA input help
 msgid "Converts a username or a number to a Telegram link"
-msgstr "Muuntaa käyttäjänimen tai puhelinnumeron Telegram-linkiksi."
+msgstr "Перетворює ім'я або номер користувача Telegram на посилання"
 
 msgid "Your clipboard is empty or does not contain text."
-msgstr "Leikepöytä on tyhjä tai ei sisällä tekstiä."
+msgstr "Ваш буфер обміну порожній або не містить тексту."
 
 msgid ""
 "The Telegram link has been previously generated, press NVDA+alt+o to open it "
 "in browser."
 msgstr ""
-"Telegram-linkki on muunnettu aiemmin. Avaa se selaimessa painamalla NVDA+Alt"
-"+O."
+"Посилання на Telegram згенеровано, натисніть NVDA+alt+o, щоб відкрити його у "
+"браузері."
 
 #. translators: the message announces after converting a number to a telegram link
 msgid ""
 "The phone number has been converted, press NVDA+Alt+O to open the link in "
 "browser."
 msgstr ""
-"Puhelinnumero on muunnettu aiemmin. Avaa linkki selaimessa painamalla NVDA"
-"+Alt+O."
+"Номер телефону перетворено, натисніть NVDA+alt+o, щоб відкрити його у "
+"браузері."
 
 #. translators: the message announces when the user converts a username to telegram link
 msgid ""
 "The username has been converted, press NVDA+alt+o to open the link in "
 "browser."
 msgstr ""
-"Käyttäjänimi on muunnettu aiemmin. Avaa linkki selaimessa painamalla NVDA+Alt"
-"+O."
+"Ім'я користувача перетворено, натисніть NVDA+alt+o, щоб відкрити його у "
+"браузері."
 
 #. translators: the message announces when the selection is not a valid number or a username
 msgid "Select a valid phone number or username to generate its Telegram link."
 msgstr ""
-"Valitse kelvollinen puhelinnumero tai käyttäjänimi luodaksesi sen Telegram-"
-"linkin."
+"Вкажіть дійсний номер телефону  чи ім'я користувача, щоб згенерувати "
+"посилання на нього."
 
 #. translators: appears in the NVDA input help
 msgid "Opens the converted link in browser."
-msgstr "Avaa muunnetun linkin selaimessa."
+msgstr "Відкриває перетворене посилання у браузері."
 
 #. translators: this message  announces if there is no successfully converted link in the clibboard.
 msgid "No link has been converted."
-msgstr "Linkkiä ei ole muunnettu."
+msgstr "Немає перетворених посилань."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on
 #. to be shown on installation and add-on information found in Add-ons Manager.
 msgid "Direct Link"
-msgstr "Suora linkki"
+msgstr "Пряме посилання"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
@@ -132,5 +133,5 @@ msgid ""
 " Converts dropbox, google drive or oneDrive links to direct links, and opens "
 "Whatsapp and Telegram chats with the given number."
 msgstr ""
-"Muuntaa Dropbox-, Google Drive- tai OneDrive-linkit suoriksi linkeiksi ja "
-"avaa Telegram- ja WhatsApp-keskustelut annetulla puhelinnumerolla."
+" Перетворює посилання на dropbox, google drive чи oneDrive у прямі "
+"посилання, а також відкриває чати Whatsapp і Telegram із заданим номером."
