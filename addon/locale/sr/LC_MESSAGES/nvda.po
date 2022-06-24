@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: directLink 1.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-22 05:38+0000\n"
-"PO-Revision-Date: 2021-12-26 05:18+0100\n"
+"PO-Revision-Date: 2022-06-19 03:58+0100\n"
 "Last-Translator: Nikola Jović <wwenikola123@gmail.com>\n"
 "Language-Team: Serbian NVDA team <wwenikola123@gmail.com>\n"
 "Language: sr\n"
@@ -22,51 +22,51 @@ msgid "Converts the given link to a direct link."
 msgstr "Pretvara zahtevan link u direktan link."
 
 msgid ""
-"The link has been converted previously, press NVDA+alt+shift+l to open it in "
+"The link has been previously converted, press NVDA+alt+o to open it in "
 "browser."
 msgstr ""
-"Link je već pretvoren, pritisnite NVDA+alt+šift+l da ga otvorite u "
+"Link je već prethodno pretvoren, pritisnite NVDA+alt+o da ga otvorite u "
 "pretraživaču."
 
 #. translators: the message will be announced when a user converts a dropbox link.
 msgid ""
 "The Dropbox link has been converted and copied to the clipboard, press NVDA"
-"+alt+shift+l to open it in browser."
+"+alt+o to open it in browser."
 msgstr ""
 "Dropbox link je pretvoren i kopiran u privremenu memoriju, pritisnite NVDA"
-"+alt+šift+l da ga otvorite u pretraživaču."
+"+alt+o da ga otvorite u pretraživaču."
 
 #. translaters: the message will be announced when a user converts a Google Drive link.
 msgid ""
 "The Google Drive link has been converted and copied to the clipboard, press "
-"nvda+alt+shift+l to open it in browser."
+"nvda+alt+o to open it in browser."
 msgstr ""
 "Google Drive link je pretvoren i kopiran u privremenu memoriju, pritisnite "
-"nvda+alt+šift+l da ga otvorite u pretraživaču."
+"nvda+alt+o da ga otvorite u pretraživaču."
 
 #. translators: the message will be announced when a user converts a oneDrive link.
 msgid ""
 "The oneDrive link has been converted and copied to the clipboard, press nvda"
-"+alt+shift+l to open it in browser."
+"+alt+o to open it in browser."
 msgstr ""
 "oneDrive link je pretvoren i kopiran u privremenu memoriju, pritisnite nvda"
-"+alt+šift+l da ga otvorite u pretraživaču."
+"+alt+o da ga otvorite u pretraživaču."
 
 #. translators: same as oneDrive message but for oneDrive business links.
 msgid ""
 "the oneDrive link has been converted and copied to the clipboard, press alt"
-"+nvda+shift+l to open it in browser"
+"+nvda+o to open it in browser"
 msgstr ""
 "oneDrive link je pretvoren i kopiran u privremenu memoriju, pritisnite alt"
-"+nvda+šift+l da ga otvorite u pretraživaču"
+"+nvda+o da ga otvorite u pretraživaču"
 
 #. translators: the message will be announced when a user converts a whatsapp number.
 msgid ""
 "The WhatsApp link has been generated and copied to the clipboard, press NVDA"
-"+alt+shift+l to open it in browser."
+"+alt+o to open it in browser."
 msgstr ""
 "WhatsApp link je generisan i kopiran u privremenu memoriju, pritisnite NVDA"
-"+alt+šift+l da ga otvorite u pretraživaču."
+"+alt+o da ga otvorite u pretraživaču."
 
 #. translators: the message will be announced when there is nothing selected, or the clipboard is empty,
 #. or if the selected or copied text not a supported service link nor phone number.
@@ -78,8 +78,48 @@ msgstr ""
 "link za pretvaranje, ili WhatsApp broj sa kojim želite da ćaskate."
 
 #. translators: appears in the NVDA input help
-msgid "opens the converted link in browser."
+msgid "Converts a username or a number to a Telegram link"
+msgstr "Pretvara korisničko ime ili broj u Telegram link"
+
+msgid "Your clipboard is empty or does not contain text."
+msgstr "Vaša privremena memorija je prazna ili ne sadrži tekst."
+
+msgid ""
+"The Telegram link has been previously generated, press NVDA+alt+o to open it "
+"in browser."
+msgstr ""
+"Telegram link je prethodno generisan, pritisnite NVDA+alt+o da ga otvorite u "
+"pretraživaču."
+
+#. translators: the message announces after converting a number to a telegram link
+msgid ""
+"The phone number has been converted, press NVDA+Alt+O to open the link in "
+"browser."
+msgstr ""
+"Broj telefona je pretvoren, pritisnite NVDA+Alt+O da biste otvorili link u "
+"pretraživaču."
+
+#. translators: the message announces when the user converts a username to telegram link
+msgid ""
+"The username has been converted, press NVDA+alt+o to open the link in "
+"browser."
+msgstr ""
+"Korisničko ime je pretvoreno, pritisnite NVDA+alt+o da biste otvorili link u "
+"pretraživaču."
+
+#. translators: the message announces when the selection is not a valid number or a username
+msgid "Select a valid phone number or username to generate its Telegram link."
+msgstr ""
+"Izaberite ispravan broj telefona ili korisničko ime za generisanje Telegram "
+"linka."
+
+#. translators: appears in the NVDA input help
+msgid "Opens the converted link in browser."
 msgstr "Otvara pretvoren link u pretraživaču."
+
+#. translators: this message  announces if there is no successfully converted link in the clibboard.
+msgid "No link has been converted."
+msgstr "Nijedan link nije pretvoren."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on
@@ -91,7 +131,7 @@ msgstr "Direktan link"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid ""
 " Converts dropbox, google drive or oneDrive links to direct links, and opens "
-"Whatsapp chats with the given number."
+"Whatsapp and Telegram chats with the given number."
 msgstr ""
 "Pretvara dropbox, google drive ili oneDrive linkove u direktne linkove, i "
-"otvara WhatsApp ćaskanja sa pruženim brojem."
+"otvara WhatsApp i Telegram ćaskanja sa pruženim brojem."
