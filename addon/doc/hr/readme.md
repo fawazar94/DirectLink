@@ -56,4 +56,4 @@ Puno hvala svim prijateljima. Bez njih to ne bih mogao ostvariti:
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=directlink
+[1]: https://www.nvaccess.org/addonStore/legacy?file=directlink
