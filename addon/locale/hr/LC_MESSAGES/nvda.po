@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: directLink 1.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-22 05:38+0000\n"
-"PO-Revision-Date: 2022-05-30 16:49+0200\n"
+"PO-Revision-Date: 2022-10-30 14:20+0100\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: \n"
 "Language: hr\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #. translators: appears in the NVDA input help.
 msgid "Converts the given link to a direct link."
-msgstr "Pretvara zadanu poveznicu u izravnu poveznicu."
+msgstr "Pretvara zadanu poveznicu u direktnu poveznicu."
 
 msgid ""
 "The link has been previously converted, press NVDA+alt+o to open it in "
@@ -91,24 +91,24 @@ msgid ""
 "The Telegram link has been previously generated, press NVDA+alt+o to open it "
 "in browser."
 msgstr ""
-"Poveznica je prethodno pretvorena. Za otvaranje poveznice u pregledniku "
-"pritisni NVDA+alt+o."
+"Telegram poveznica je prethodno pretvorena. Za otvaranje poveznice u "
+"pregledniku pritisni NVDA+alt+o."
 
 #. translators: the message announces after converting a number to a telegram link
 msgid ""
 "The phone number has been converted, press NVDA+Alt+O to open the link in "
 "browser."
 msgstr ""
-"Poveznica je prethodno pretvorena. Za otvaranje poveznice u pregledniku "
-"pritisni NVDA+alt+O."
+"Telefonski broj je pretvoren. Za otvaranje poveznice u pregledniku pritisni "
+"NVDA+alt+O."
 
 #. translators: the message announces when the user converts a username to telegram link
 msgid ""
 "The username has been converted, press NVDA+alt+o to open the link in "
 "browser."
 msgstr ""
-"Poveznica je prethodno pretvorena. Za otvaranje poveznice u pregledniku "
-"pritisni NVDA+alt+o."
+"Korisničko ime je pretvoreno. Za otvaranje poveznice u pregledniku pritisni "
+"NVDA+alt+o."
 
 #. translators: the message announces when the selection is not a valid number or a username
 msgid "Select a valid phone number or username to generate its Telegram link."
@@ -128,7 +128,7 @@ msgstr "Nijedna poveznica nije pretvorena."
 #. Translators: Summary for this add-on
 #. to be shown on installation and add-on information found in Add-ons Manager.
 msgid "Direct Link"
-msgstr "Izvravna poveznica"
+msgstr "Direktna poveznica"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager

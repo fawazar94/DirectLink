@@ -61,4 +61,4 @@ mógłbym tego zrobić:
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=directlink
+[1]: https://www.nvaccess.org/addonStore/legacy?file=directlink

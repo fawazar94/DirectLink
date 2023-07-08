@@ -1,7 +1,7 @@
 ## Information
 - Author: Fawaz Abdul Rahman
-- Version: 2.1
-- [Download Link](https://addons.nvda-project.org/files/get.php?file=directlink)
+- Version: 2.2
+- [Download Link][1]
 ## Functionality
 The purpose of the addon is to convert the Dropbox, Google Drive or oneDrive (both personal and business) links to a direct link, furthermore, it generates a direct link to a WhatsApp or telegram chat with the chosen selected phone number or username.
 ## Usage
@@ -23,7 +23,12 @@ Even more, you can share the WhatsApp link of your own number if people usually 
 - Certain type of files and sizes in Google Drive might take you to a page that says, "Google Drive can't scan this file for viruses." in that case, you have to click on download anyway link.
 - The Telegram chat with a phone number works according to the privacy settings of the user.
 
-## what's new in version 2.1
+## what's new in version 2.2
+
+- Update repo files, to include latest addon template ones.
+- Add localization and documentation updates.
+
+## what's new in version 2.1 
 
 - Added the ability to generate telegram links with a selected phone number or username.
 - Disabled the addon in the secure screen for security reasons.
@@ -37,3 +42,4 @@ A huge thanks goes to the following friends, without them I couldn't have made i
 - Riad Assoum for translating the add-on to Arabic.
 - all testers.
 
+[1]: https://github.com/fawazar94/DirectLink/releases/download/2.2/directLink-2.2.nvda-addon

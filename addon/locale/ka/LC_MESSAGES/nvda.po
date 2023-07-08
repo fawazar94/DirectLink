@@ -1,0 +1,136 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the directLink package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: directLink 2.1\n"
+"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
+"POT-Creation-Date: 2022-05-06 04:08+0000\n"
+"PO-Revision-Date: 2022-07-26 12:13+0400\n"
+"Last-Translator: Dragan Ratkovich\n"
+"Language-Team: \n"
+"Language: ka\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.1.1\n"
+
+#. translators: appears in the NVDA input help.
+msgid "Converts the given link to a direct link."
+msgstr "გარდაქმნის მოცემულ ბმულს პირდაპირ ბმულად."
+
+msgid ""
+"The link has been previously converted, press NVDA+alt+o to open it in "
+"browser."
+msgstr ""
+"ბმული წინასწარ უკვე დაგენერირებული იყო, დააჭირეთ NVDA+alt+o-ს ბრაუზერში "
+"გასახსნელად."
+
+#. translators: the message will be announced when a user converts a dropbox link.
+msgid ""
+"The Dropbox link has been converted and copied to the clipboard, press NVDA"
+"+alt+o to open it in browser."
+msgstr ""
+"Dropbox-ის ბმული გარდაქმნილია და დაკოპირებულია ბუფერში, დააჭირეთ NVDA+alt+o-"
+"ს ბრაუზერში გასახსნელად."
+
+#. translaters: the message will be announced when a user converts a Google Drive link.
+msgid ""
+"The Google Drive link has been converted and copied to the clipboard, press "
+"nvda+alt+o to open it in browser."
+msgstr ""
+"Google Drive-ის ბმული გარდაქმნილია და დაკოპირებულია ბუფერში, დააჭირეთ NVDA"
+"+alt+o-ს ბრაუზერში გასახსნელად."
+
+#. translators: the message will be announced when a user converts a oneDrive link.
+msgid ""
+"The oneDrive link has been converted and copied to the clipboard, press nvda"
+"+alt+o to open it in browser."
+msgstr ""
+"OneDrive-ის ბმული გარდაქმნილია და დაკოპირებულია ბუფერში, დააჭირეთ NVDA+alt+o-"
+"ს ბრაუზერში გასახსნელად."
+
+#. translators: same as oneDrive message but for oneDrive business links.
+msgid ""
+"the oneDrive link has been converted and copied to the clipboard, press alt"
+"+nvda+o to open it in browser"
+msgstr ""
+"oneDrive-ის ბმული გარდაქმნილია და დაკოპირებულია ბუფერში, დააჭირეთ NVDA+alt+o-"
+"ს ბრაუზერში გასახსნელად"
+
+#. translators: the message will be announced when a user converts a whatsapp number.
+msgid ""
+"The WhatsApp link has been generated and copied to the clipboard, press NVDA"
+"+alt+o to open it in browser."
+msgstr ""
+"WhatsApp-ის ბმული დაგენერირდა და დაკოპირდა ბუფერში, დააჭირეთ NVDA+alt+o-ს "
+"ბრაუზერში გასახსნელად."
+
+#. translators: the message will be announced when there is nothing selected, or the clipboard is empty,
+#. or if the selected or copied text not a supported service link nor phone number.
+msgid ""
+"Please select or copy a dropbox link, a google drive link or a oneDrive link "
+"to convert, or a WhatsApp number to chat with."
+msgstr ""
+"გთხოვთ, აირჩიოთ ან დააკოპიროთ dropbox, google drive ან oneDrive-ის ბმული "
+"გადასაყვანათ, ან WhatsApp ნომერი სასაუბროდ."
+
+#. translators: appears in the NVDA input help
+msgid "Converts a username or a number to a Telegram link"
+msgstr "გარდაქმნის მომხმარებლის სახელს ან ნომერს Telegram-ის ბმულად"
+
+msgid "Your clipboard is empty or does not contain text."
+msgstr "თქვენი ბუფერი ცარიელია ან არ შეიცავს ტექსტს."
+
+msgid ""
+"The Telegram link has been previously generated, press NVDA+alt+o to open it "
+"in browser."
+msgstr ""
+"Telegram-ის ბმული წინასწარ უკვე დაგენერირებული იყო, დააჭირეთ NVDA+alt+o-ს "
+"ბრაუზერში გასახსნელად."
+
+#. translators: the message announces after converting a number to a telegram link
+msgid ""
+"The phone number has been converted, press NVDA+Alt+O to open the link in "
+"browser."
+msgstr ""
+"ტელეფონის ნომერი გარდაქმნილია, დააჭირეთ NVDA+alt+o-ს ბრაუზერში გასახსნელად."
+
+#. translators: the message announces when the user converts a username to telegram link
+msgid ""
+"The username has been converted, press NVDA+alt+o to open the link in "
+"browser."
+msgstr ""
+"მომხმარებლის სახელი გარდაქმნილია, დააჭირეთ NVDA+alt+o-ს ბრაუზერში "
+"გასახსნელად."
+
+#. translators: the message announces when the selection is not a valid number or a username
+msgid "Select a valid phone number or username to generate its Telegram link."
+msgstr ""
+"აირჩიეთ ვალიდური ტელეფონის ნომერი ან მომხმარებლის სახელი მისი Telegram "
+"ბმულის დასაგენერირებლად."
+
+#. translators: appears in the NVDA input help
+msgid "Opens the converted link in browser."
+msgstr "ხსნის გარდაქმნილ ბმულს ბრაუზერში."
+
+#. translators: this message  announces if there is no successfully converted link in the clibboard.
+msgid "No link has been converted."
+msgstr "არცერთი ბმული არ იქნა გარდაქმნილი."
+
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on
+#. to be shown on installation and add-on information found in Add-ons Manager.
+msgid "Direct Link"
+msgstr "პირდაპირი ბმული"
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+msgid ""
+" Converts dropbox, google drive or oneDrive links to direct links, and opens "
+"Whatsapp and Telegram chats with the given number."
+msgstr ""
+" გარდაქმნის dropbox, google drive და OneDrive-ის ბმულებს პირდაპირ ბმულად და "
+"მოცემული ნომრით ხსნის Whatsapp და Telegram-ის ჩათს."

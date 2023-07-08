@@ -8,14 +8,118 @@ msgstr ""
 "Project-Id-Version: directLink 1.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-22 05:38+0000\n"
-"PO-Revision-Date: 2021-09-13 10:40+0200\n"
+"PO-Revision-Date: 2022-11-05 11:40+0100\n"
+"Last-Translator: Nicolai Svendsen <chojiro1990@gmail.com>\n"
+"Language-Team: \n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Last-Translator: Nicolai Svendsen <chojiro1990@gmail.com>\n"
-"Language-Team: \n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.2\n"
+
+#. translators: appears in the NVDA input help.
+msgid "Converts the given link to a direct link."
+msgstr "Konverterer det angivne link til et direkte link."
+
+msgid ""
+"The link has been previously converted, press NVDA+alt+o to open it in "
+"browser."
+msgstr ""
+"Linket er tidligere blevet konverteret. Tryk på NVDA+alt+o for at åbne det i "
+"browseren."
+
+#. translators: the message will be announced when a user converts a dropbox link.
+msgid ""
+"The Dropbox link has been converted and copied to the clipboard, press NVDA"
+"+alt+o to open it in browser."
+msgstr ""
+"Dropbox-linket er blevet konverteret og kopieret til udklipsholderen. Tryk "
+"på NVDA+alt+o for at åbne det i browseren."
+
+#. translaters: the message will be announced when a user converts a Google Drive link.
+msgid ""
+"The Google Drive link has been converted and copied to the clipboard, press "
+"nvda+alt+o to open it in browser."
+msgstr ""
+"Google Drev-linket er blevet konverteret og kopieret til udklipsholderen. "
+"Tryk på NVDA+alt+o for at åbne det i browseren."
+
+#. translators: the message will be announced when a user converts a oneDrive link.
+msgid ""
+"The oneDrive link has been converted and copied to the clipboard, press nvda"
+"+alt+o to open it in browser."
+msgstr ""
+"OneDrive-linket er blevet konverteret og kopieret til udklipsholderen. Tryk "
+"på NVDA+alt+o for at åbne det i browseren."
+
+#. translators: same as oneDrive message but for oneDrive business links.
+msgid ""
+"the oneDrive link has been converted and copied to the clipboard, press alt"
+"+nvda+o to open it in browser"
+msgstr ""
+"oneDrive-linket er blevet konverteret og kopieret til udklipsholderen. Tryk "
+"på alt+NVDA+o for at åbne det i browseren"
+
+#. translators: the message will be announced when a user converts a whatsapp number.
+msgid ""
+"The WhatsApp link has been generated and copied to the clipboard, press NVDA"
+"+alt+o to open it in browser."
+msgstr ""
+"WhatsApp-linket er blevet genereret og kopieret til udklipsholderen. Tryk på "
+"NVDA+alt+o for at åbne det i browseren."
+
+#. translators: the message will be announced when there is nothing selected, or the clipboard is empty,
+#. or if the selected or copied text not a supported service link nor phone number.
+msgid ""
+"Please select or copy a dropbox link, a google drive link or a oneDrive link "
+"to convert, or a WhatsApp number to chat with."
+msgstr ""
+"Vælg eller kopier et dropbox-link, et google drive-link eller et oneDrive-"
+"link til at konvertere, eller et WhatsApp-nummer at chatte med."
+
+#. translators: appears in the NVDA input help
+msgid "Converts a username or a number to a Telegram link"
+msgstr "Konverterer et brugernavn eller et nummer til et Telegram-link."
+
+msgid "Your clipboard is empty or does not contain text."
+msgstr "Din udklipsholder er tomt eller indeholder ikke tekst."
+
+msgid ""
+"The Telegram link has been previously generated, press NVDA+alt+o to open it "
+"in browser."
+msgstr ""
+"Telegram-linket er tidligere blevet genereret. Tryk på NVDA+alt+o for at "
+"åbne det i browseren."
+
+#. translators: the message announces after converting a number to a telegram link
+msgid ""
+"The phone number has been converted, press NVDA+Alt+O to open the link in "
+"browser."
+msgstr ""
+"Telefonnummeret er blevet konverteret. Tryk på NVDA+alt+o for at åbne linket "
+"i browseren."
+
+#. translators: the message announces when the user converts a username to telegram link
+msgid ""
+"The username has been converted, press NVDA+alt+o to open the link in "
+"browser."
+msgstr ""
+"Brugernavnet er blevet konverteret. Tryk på NVDA+alt+o for at åbne linket i "
+"browseren."
+
+#. translators: the message announces when the selection is not a valid number or a username
+msgid "Select a valid phone number or username to generate its Telegram link."
+msgstr ""
+"Vælg et gyldigt telefonnummer eller brugernavn for at generere dets Telegram-"
+"link."
+
+#. translators: appears in the NVDA input help
+msgid "Opens the converted link in browser."
+msgstr "Åbner det konverterede link i browseren."
+
+#. translators: this message  announces if there is no successfully converted link in the clibboard.
+msgid "No link has been converted."
+msgstr "Intet link er blevet konverteret."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on
@@ -27,7 +131,7 @@ msgstr "Direkte link"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid ""
 " Converts dropbox, google drive or oneDrive links to direct links, and opens "
-"Whatsapp chats with the given number."
+"Whatsapp and Telegram chats with the given number."
 msgstr ""
 " Konverterer dropbox, google drive eller oneDrive -links til direkte links, "
 "og åbner Whatsapp -chats med det givne nummer."
