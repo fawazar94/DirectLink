@@ -3,7 +3,6 @@
 # and opens Whatsapp and Telegram chats with the given number.
 # copyright 2021 Fawaz Abdul rahman, released under GPL
 
-
 import globalPluginHandler
 import ui
 import re
@@ -13,7 +12,6 @@ from textInfos import POSITION_SELECTION
 from scriptHandler import script
 import addonHandler
 addonHandler.initTranslation()
-
 
 # the following function was taken with modification from Quick Dictionary addon by Oleksandr Gryshchenko
 def getSelectedText() -> str:
@@ -40,11 +38,11 @@ def getSelectedText() -> str:
 		return text
 	return info.text
 
-
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	converted = None
 
 	def isLink(self, match):
+		# keep the original domain detection logic for now
 		text1 = re.match(r"https:\/\/(?:www\.dropbox|drive\.google|1drv|.*?sharepoint)\.(com|ms)\/", match)
 		if text1:
 			global domain
@@ -52,8 +50,46 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		return text1
 
 	def isNumber(self, wNumber):
+		# keep permissive number check, we will further validate international format in converters
 		text1 = re.match(r"^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$", wNumber)
 		return text1
+
+	# --- helpers for Phase 1 (no external deps, minimal surface) ---
+	def _cleanDigits(self, s: str) -> str:
+		# remove spaces, hyphens, parentheses, dots
+		return s.replace('-', '').replace('(', '').replace(')', '').replace('.', '').replace(' ', '')
+
+	def _normalizeInternational(self, raw: str):
+		"""
+		Normalize phone input to two forms:
+		- waDigits: international number *without* '+' or '00' (for wa.me)
+		- plusForm: international number *with* '+' (for t.me/+)
+		Returns (waDigits, plusForm) or raises ValueError if no country code is present.
+		"""
+		s = self._cleanDigits(raw).strip()
+		if not s:
+			raise ValueError("empty")
+
+		# accept +<digits> or 00<digits>; reject local numbers in this phase
+		if s.startswith('+'):
+			digits = s[1:]
+		elif s.startswith('00'):
+			# convert 00CC... -> CC...
+			digits = s[2:]
+		else:
+			# no country code provided
+			raise ValueError("missingCountryCode")
+
+		if not digits.isdigit():
+			raise ValueError("invalidChars")
+
+		# basic sanity window for E.164 length without '+'
+		if not (8 <= len(digits) <= 15):
+			raise ValueError("badLength")
+
+		return digits, f"+{digits}"
+
+	# --- file host converters ---
 
 	def convertDB(self, dbLink):
 		dbLink = dbLink.replace("?dl=0", "?dl=1")
@@ -85,17 +121,19 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		dLink = dLink + "?download=1"
 		return dLink
 
+	# --- messaging converters (Phase 1 behavior) ---
+
 	def convertWP(self, wNumber):
-		wNumber = wNumber.replace('+', '').replace('-', '').replace('(', '').replace(')', '').replace('.', '').replace(' ', '')
-		wNumber = f"https://api.whatsapp.com/send?phone={wNumber}"
-		return wNumber
+		# Phase 1: canonical web format https://wa.me/<digits>
+		# Accept +CC... or 00CC...; reject local numbers (no country code) to avoid broken wa.me links
+		waDigits, _plusForm = self._normalizeInternational(wNumber)
+		return f"https://wa.me/{waDigits}"
 
 	def convertTelegram(self, telegram):
-		# for telegram phone numbers
-		telegram = telegram.replace('+', '').replace('-', '').replace('(', '').replace(')', '').replace('.', '').replace(' ', '')
-		telegram = f"https://t.me/+{telegram}"
-		return telegram
-
+		# Phase 1: web format for phone numbers -> https://t.me/+<international_number>
+		# Accept +CC... or 00CC...; reject local numbers (no country code)
+		_waDigits, plusForm = self._normalizeInternational(telegram)
+		return f"https://t.me/+{plusForm[1:] if plusForm.startswith('++') else plusForm}"  # ensure a single '+' after /+
 
 	@script(
 		# translators: appears in the NVDA input help.
@@ -106,7 +144,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def script_convertingLink(self, gesture):
 		global link
 		link = getSelectedText()
-		link.strip()
+		link = link.strip()  # Phase 1 fix: assign back so whitespace is trimmed
 		if link == self.converted:
 			ui.message(_("The link has been previously converted, press NVDA+alt+o to open it in browser."))
 		else:
@@ -136,7 +174,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 					# translators: same as oneDrive message but for oneDrive business links.
 					ui.message(_("the oneDrive link has been converted and copied to the clipboard, press alt+nvda+o to open it in browser"))
 			elif self.isNumber(link):
-				link = self.convertWP(link)
+				# Phase 1: only generate when an international country code is present
+				try:
+					link = self.convertWP(link)
+				except ValueError:
+					# translators: the message will be announced when a local number is detected without a country code
+					ui.message(_("Please include your country code (start with + or 00) to generate a WhatsApp link."))
+					return
 				self.converted = link
 				api.copyToClip(link)
 				# translators: the message will be announced when a user converts a whatsapp number.
@@ -155,6 +199,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def script_telegram(self, gesture):
 		global link
 		link = getSelectedText()
+		link = link.strip()  # Phase 1 fix: trim whitespace
 		try:
 			link = link.split()[0]
 		except:
@@ -164,7 +209,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				ui.message(_("The Telegram link has been previously generated, press NVDA+alt+o to open it in browser."))
 			else:
 				if self.isNumber(link):
-					link = self.convertTelegram(link)
+					# Phase 1: only generate when an international country code is present
+					try:
+						link = self.convertTelegram(link)
+					except ValueError:
+						ui.message(_("Please include your country code (start with + or 00) to generate a Telegram link."))
+						return
 					api.copyToClip(link)
 					self.converted = link
 					# translators: the message announces after converting a number to a telegram link
