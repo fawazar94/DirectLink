@@ -12,6 +12,12 @@ from textInfos import POSITION_SELECTION
 from scriptHandler import script
 import addonHandler
 addonHandler.initTranslation()
+import wx
+from gui import settingsDialogs
+from config import conf
+
+# Keep a reference to the running plugin instance so the settings panel can update it.
+currentPlugin = None
 
 # the following function was taken with modification from Quick Dictionary addon by Oleksandr Gryshchenko
 def getSelectedText() -> str:
@@ -40,6 +46,19 @@ def getSelectedText() -> str:
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	converted = None
+
+	def __init__(self):
+		super().__init__()
+		# Persisted settings
+		if 'directLink' not in conf:
+			conf['directLink'] = {}
+		dl = conf['directLink']
+		self.preferDeepLinkWA = bool(dl.get('preferDeepLinkWA', False))
+		self.preferDeepLinkTG = bool(dl.get('preferDeepLinkTG', False))
+
+		# Register the running instance
+		global currentPlugin
+		currentPlugin = self
 
 	def isLink(self, match):
 		# keep the original domain detection logic for now
@@ -124,16 +143,33 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# --- messaging converters (Phase 1 behavior) ---
 
 	def convertWP(self, wNumber):
-		# Phase 1: canonical web format https://wa.me/<digits>
-		# Accept +CC... or 00CC...; reject local numbers (no country code) to avoid broken wa.me links
-		waDigits, _plusForm = self._normalizeInternational(wNumber)
-		return f"https://wa.me/{waDigits}"
+		# Expect + or 00 (Phase 1 behavior)
+		raw = wNumber.strip()
+		s = raw.replace('+', '').replace('-', '').replace('(', '').replace(')', '').replace('.', '').replace(' ', '')
+		if raw.startswith('00'):
+			s = s[2:]
+		elif not raw.startswith('+'):
+			raise ValueError("missingCountryCode")
+		if not s.isdigit():
+			raise ValueError("invalidChars")
+
+		if self.preferDeepLinkWA:
+			return f"whatsapp://send?phone={s}"
+		return f"https://wa.me/{s}"
 
 	def convertTelegram(self, telegram):
-		# Phase 1: web format for phone numbers -> https://t.me/+<international_number>
-		# Accept +CC... or 00CC...; reject local numbers (no country code)
-		_waDigits, plusForm = self._normalizeInternational(telegram)
-		return f"https://t.me/+{plusForm[1:] if plusForm.startswith('++') else plusForm}"  # ensure a single '+' after /+
+		raw = telegram.strip()
+		s = raw.replace('+', '').replace('-', '').replace('(', '').replace(')', '').replace('.', '').replace(' ', '')
+		if raw.startswith('00'):
+			s = s[2:]
+		elif not raw.startswith('+'):
+			raise ValueError("missingCountryCode")
+		if not s.isdigit():
+			raise ValueError("invalidChars")
+
+		if self.preferDeepLinkTG:
+			return f"tg://resolve?phone={s}"
+		return f"https://t.me/+{s}"
 
 	@script(
 		# translators: appears in the NVDA input help.
@@ -218,13 +254,16 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 					api.copyToClip(link)
 					self.converted = link
 					# translators: the message announces after converting a number to a telegram link
-					ui.message(_("The phone number has been converted, press NVDA+Alt+O to open the link in browser."))
-				elif re.search(r"^\w{5,32}$", link):
-					link = f"https://t.me/{link}"
+					ui.message(_("The phone number has been converted, press NVDA+Alt+O to open the link."))
+				elif re.search(r"^@?\w{5,32}$", link):
+					username = link[1:] if link.startswith("@") else link
+					if self.preferDeepLinkTG:
+						link = f"tg://resolve?domain={username}"
+					else:
+						link = f"https://t.me/{username}"
 					self.converted = link
 					api.copyToClip(link)
-					# translators: the message announces when the user converts a username to telegram link
-					ui.message(_("The username has been converted, press NVDA+alt+o to open the link in browser."))
+					ui.message(_("The username has been converted, press NVDA+alt+o to open the link."))
 				else:
 					# translators: the message announces when the selection is not a valid number or a username
 					ui.message(_("Select a valid phone number or username to generate its Telegram link."))
@@ -241,3 +280,57 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		except:
 			# translators: this message  announces if there is no successfully converted link in the clibboard.
 			ui.message(_("No link has been converted."))
+
+
+class DirectLinkSettingsPanel(settingsDialogs.SettingsPanel):
+	# translators: Settings panel title shown in NVDA Preferences > Settings.
+	title = _("DirectLink")
+
+	def makeSettings(self, sizer):
+		self.chkWA = wx.CheckBox(self, label=_("Prefer app deep links for WhatsApp"))
+		self.chkTG = wx.CheckBox(self, label=_("Prefer app deep links for Telegram"))
+
+		if 'directLink' not in conf:
+			conf['directLink'] = {}
+		dl = conf['directLink']
+
+		self.chkWA.SetValue(bool(dl.get('preferDeepLinkWA', False)))
+		self.chkTG.SetValue(bool(dl.get('preferDeepLinkTG', False)))
+
+		helpTxt = wx.StaticText(
+			self,
+			label=_("When off, links open via the web. When on, links open in the installed app if available.")
+		)
+
+		sizer.Add(self.chkWA, flag=wx.ALL, border=5)
+		sizer.Add(self.chkTG, flag=wx.ALL, border=5)
+		sizer.Add(helpTxt, flag=wx.ALL, border=5)
+
+	def onSave(self):
+		if 'directLink' not in conf:
+			conf['directLink'] = {}
+		dl = conf['directLink']
+		dl['preferDeepLinkWA'] = self.chkWA.GetValue()
+		dl['preferDeepLinkTG'] = self.chkTG.GetValue()
+		conf.save()
+
+		# Apply immediately to the running plugin instance if available
+		try:
+			if currentPlugin is not None:
+				currentPlugin.preferDeepLinkWA = self.chkWA.GetValue()
+				currentPlugin.preferDeepLinkTG = self.chkTG.GetValue()
+		except Exception:
+			pass
+
+		try:
+			super().onSave()
+		except Exception:
+			pass
+
+
+# Register panel with NVDA Settings (reload-safe)
+if not any(
+	getattr(panel, "__name__", "") == "DirectLinkSettingsPanel"
+	for panel in settingsDialogs.NVDASettingsDialog.categoryClasses
+):
+	settingsDialogs.NVDASettingsDialog.categoryClasses.append(DirectLinkSettingsPanel)
