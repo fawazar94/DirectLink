@@ -143,33 +143,18 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# --- messaging converters (Phase 1 behavior) ---
 
 	def convertWP(self, wNumber):
-		# Expect + or 00 (Phase 1 behavior)
-		raw = wNumber.strip()
-		s = raw.replace('+', '').replace('-', '').replace('(', '').replace(')', '').replace('.', '').replace(' ', '')
-		if raw.startswith('00'):
-			s = s[2:]
-		elif not raw.startswith('+'):
-			raise ValueError("missingCountryCode")
-		if not s.isdigit():
-			raise ValueError("invalidChars")
+		digits, _ = self._normalizeInternational(wNumber)
 
 		if self.preferDeepLinkWA:
-			return f"whatsapp://send?phone={s}"
-		return f"https://wa.me/{s}"
+			return f"whatsapp://send?phone={digits}"
+		return f"https://wa.me/{digits}"
 
 	def convertTelegram(self, telegram):
-		raw = telegram.strip()
-		s = raw.replace('+', '').replace('-', '').replace('(', '').replace(')', '').replace('.', '').replace(' ', '')
-		if raw.startswith('00'):
-			s = s[2:]
-		elif not raw.startswith('+'):
-			raise ValueError("missingCountryCode")
-		if not s.isdigit():
-			raise ValueError("invalidChars")
+		digits, plusForm = self._normalizeInternational(telegram)
 
 		if self.preferDeepLinkTG:
-			return f"tg://resolve?phone={s}"
-		return f"https://t.me/+{s}"
+			return f"tg://resolve?phone={digits}"
+		return f"https://t.me/+{digits}"
 
 	@script(
 		# translators: appears in the NVDA input help.
